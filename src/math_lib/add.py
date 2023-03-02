@@ -1,13 +1,14 @@
 """Addition module."""
 
-def add(number_1: float, number_2: float) -> float: 
+
+def add(augend: float, addend: float) -> float:
     """Addition function.
 
     Args:
-        number_1 (float): Addend.
-        number_2 (float): Addend.
+        augend (float): The augend of the addition.
+        addend (float): The addend of the addition.
 
     Returns:
-        float: sum of number_1 and number_2
+        float: The sum of augend and addend.
     """
-    return number_1 + number_2
+    return augend + addend
