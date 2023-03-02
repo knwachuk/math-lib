@@ -1,5 +1,5 @@
 [project]
-name = "math-lib"
+name = "math_lib"
 version = "0.0.1"
 authors = [
   { name="DEPA SAVIA Member", email="msu-evrl@egmail.com" },
