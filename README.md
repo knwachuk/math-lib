@@ -13,6 +13,9 @@ The math library will be rudimentary but fully functional, including all element
 3. Multiplication (`mult`) ** 2
 4. Division (`div`)
 
+#### `add`
+Addition function
+
 ### Advanced Functions
 
 1. Square Root (`sqrt`)
