@@ -76,6 +76,34 @@ def sub(minuend: float, subtrahend: float) -> float:
     return minuend - subtrahend
 ```
 
+#### `mult`
+
+This is a binary function that takes in two **numbers** (`multiplier` and `multiplicand`) and returns the product of the two `numbers`.
+
+```python
+def mult(multiplier: float, multiplicand: float) -> float:
+    """Multiplication function.
+
+    Args:
+        multiplier (float): Multiplier.
+        multiplicand (float): Multiplicand.
+
+    Returns:
+        float: Product of multiplier and multiplicand.
+    """
+    value = range(multiplicand)
+    func = add
+    if multiplicand < 0:
+        value = range(0, multiplicand, -1)
+        func = sub
+
+    sum = 0
+    for _ in value:
+        sum = func(sum, multiplier)
+
+    return sum
+```
+
 ### Advanced Functions <a name="advanced-functions"></a>
 
 1. Square Root (`sqrt`)
