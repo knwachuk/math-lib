@@ -1,15 +1,14 @@
-""""Subtraction Module"""
+""""Subtraction Module."""
 
 
 def sub(minuend: float, subtrahend: float) -> float:
     """Subtraction function.
 
     Args:
-        minuend (float): the number being subtracted from.
-        subtrahend (float): the number being subtracted from another.
+        minuend (float): The number being subtracted from.
+        subtrahend (float): The number being subtracted from another.
 
     Returns:
-        float: solution to problem.
+        float: The difference of minuend and subtrahend.
     """
-    solution = minuend - subtrahend
-    return solution
+    return minuend - subtrahend
