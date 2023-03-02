@@ -8,9 +8,30 @@ The math library will be rudimentary but fully functional, including all element
 
 The only limitation is that only the Python `+` and `-` operators are allowed to be utilized. *Every other function MUST use these*. That is, no operational code is allowed to use 3rd party libraries or the operators exceptions `+` and `-`.
 
-*For example*
+$$3 * 3 = 3 + 3 + 3$$
+$$-3 * 3 = -3 + -3 + -3 = -3 - 3 - 3$$
 
-The `mult` function uses the fact that *multiplication is a series of additions or subtractions* in compute the multiplication of two numbers.
+### For example
+
+The `mult` function uses the fact that *multiplication is a series of additions or subtractions* in compute the multiplication of two numbers. So 3 * 2 is 
+
+```python
+sum = 0
+for _ in range(2):
+    sum = sum + 3
+```
+
+| Operation | Python Code |
+| -- | -- |
+| $$3 * 2$$ | `sum = 0; for _ in range(2): sum = sum + 3` |
+| $$-3 * 2$$| `sum = 0; for _ in range(2): sum = sum - 3` |
+
+Once created, the `math_lib` will have the ability do multiplications.
+
+```python
+mult(3, 2)
+```
+
 
 ## Library Functions
 
@@ -74,6 +95,34 @@ def sub(minuend: float, subtrahend: float) -> float:
         float: The difference of minuend and subtrahend.
     """
     return minuend - subtrahend
+```
+
+#### `mult`
+
+This is a binary function that takes in two **numbers** (`multiplier` and `multiplicand`) and returns the product of the two `numbers`.
+
+```python
+def mult(multiplier: float, multiplicand: float) -> float:
+    """Multiplication function.
+
+    Args:
+        multiplier (float): Multiplier.
+        multiplicand (float): Multiplicand.
+
+    Returns:
+        float: Product of multiplier and multiplicand.
+    """
+    value = range(multiplicand)
+    func = add
+    if multiplicand < 0:
+        value = range(0, multiplicand, -1)
+        func = sub
+
+    sum = 0
+    for _ in value:
+        sum = func(sum, multiplier)
+
+    return sum
 ```
 
 ### Advanced Functions <a name="advanced-functions"></a>
