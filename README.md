@@ -14,7 +14,40 @@ The math library will be rudimentary but fully functional, including all element
 4. Division (`div`)
 
 #### `add`
-Addition function
+
+This is a binary function that takes in two **numbers** (`augend` and `addend`) and returns the sum of two `numbers`.
+
+```python
+def add(augend: float, addend: float) -> float:
+    """Addition function.
+
+    Args:
+        augend (float): The augend of the addition.
+        addend (float): The addend of the addition.
+
+    Returns:
+        float: The sum of augend and addend.
+    """
+    return augend + addend
+```
+
+#### `sub`
+
+This is a binary function that takes in two **numbers** (`minuend` and `subtrahend`) and returns the difference of two `numbers`.
+
+```python
+def sub(minuend: float, subtrahend: float) -> float:
+    """Subtraction function.
+
+    Args:
+        minuend (float): The number being subtracted from.
+        subtrahend (float): The number being subtracted from another.
+
+    Returns:
+        float: The difference of minuend and subtrahend.
+    """
+    return minuend - subtrahend
+```
 
 ### Advanced Functions
 
@@ -29,4 +62,20 @@ Addition function
 
 #### `abs`
 
-This function returns the absolute value of a `number`
+This function returns the absolute value of a `number`.
+
+```python
+def abs(number: float) -> float:
+    """Absolute function.
+
+    Args:
+        number (float): Real number.
+
+    Returns:
+        float: Absolute value of number.
+    """
+    if number < 0:
+        number = -1 * number
+
+    return number
+```
