@@ -23,3 +23,7 @@ The math library will be rudimentary but fully functional, including all element
 
 1. Absolute Value (`abs`) ** 1
 2. Division and Modulus (`divmod`) ** 3
+
+#### `abs`
+
+This function returns the absolute value of a `number`
